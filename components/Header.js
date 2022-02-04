@@ -1,7 +1,10 @@
-import React from 'react';
+import Link from 'next/link'
+import Image from 'next/image'
+import React from 'react'
+import TokenMindsLogo from '../assets/TokenMindsLogo.jpg' 
 
 const style = {
-    wrapper: `bg-[#04111d] w-screen px-[1.2rem] py-[0.8rem] flex `,
+    wrapper: `bg-[#cfd44e] w-screen px-[1.2rem] py-[0.8rem] flex `,
     logoContainer: `flex items-center cursor-pointer`,
     logoText: ` ml-[0.8rem] text-white font-semibold text-2xl`,
     searchBar: `flex flex-1 mx-[0.8rem] w-max-[520px] items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c]`,
@@ -13,7 +16,13 @@ const style = {
   }
 
 const Header = () => {
-  return <div>HEADER</div>;
+  return <div className={style.wrapper}>
+      <Link href="/"> 
+        <div className = {style.logoContainer}>
+            <Image src = {TokenMindsLogo} height={120} width={120}/>
+        </div>
+      </Link>
+  </div>
 };
 
 export default Header;
