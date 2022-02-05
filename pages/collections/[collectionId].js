@@ -70,7 +70,7 @@ const Collection = () => {
       'https://eth-rinkeby.alchemyapi.io/v2/G--kvnNcpDx08GKWBappKdm671mE9Vjk'
     )
     return sdk.getMarketplaceModule(
-      '0x93A771F7ce845C33381f677489cF21a5964EDD0b'
+      '00x7028739D8715d6b99A73E97378438036DfCacA0f'
     )
   }, [provider])
 
