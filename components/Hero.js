@@ -2,7 +2,7 @@ import React from 'react'
 
 const style = {
   wrapper: `relative`,
-  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://i.pinimg.com/originals/b0/7f/b2/b07fb28a04d13b11ac59ca73e900f742.jpg')] before:bg-cover before:bg-center before:opacity-30 before:blur`,
+  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://i.pinimg.com/originals/b0/7f/b2/b07fb28a04d13b11ac59ca73e900f742.jpg')] before:bg-cover before:bg-center before:opacity-90 before:blur`,
   contentWrapper: `flex h-screen relative justify-center flex-wrap items-center`,
   copyContainer: `w-1/2`,
   title: `relative text-white text-[46px] font-semibold`,
@@ -27,7 +27,7 @@ const Hero = () => {
               Discover, collect, and sell extraordinary NFTs
             </div>
             <div className={style.description}>
-              OpenSea is the world&apos;s first and largest NFT marketplace
+              TokenMinds: Where NFTs are unscripted
             </div>
             <div className={style.ctaContainer}>
               <button className={style.accentedButton}>Explore</button>
@@ -47,12 +47,12 @@ const Hero = () => {
                 alt=""
               />
               <div className={style.author}>
-                <div className={style.name}>Jolly</div>
+                <div className={style.name}>Hemang</div>
                 <a
                   className="text-[#1868b7]"
-                  href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/2324922113504035910649522729980423429926362207300810036887725141691069366277"
+                  href="/"
                 >
-                  hola-kanola
+                  Hemang-Joshi
                 </a>
               </div>
             </div>
