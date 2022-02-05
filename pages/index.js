@@ -10,10 +10,44 @@ const style = {
 }
 
 export default function Home() {
+  useEffect(() => {
+    if (!address) return
+    ;(async () => {
+      const userDoc = {
+        _type: 'users',
+        _id: address,
+        userName: 'Unnamed',
+        walletAddress: address,
+      }
+
+      const result = await client.createIfNotExists(userDoc)
+
+      welcomeUser(result.userName)
+    })()
+  }, [address])
+
   return (
-  <>
-    <Header />
-    <Hero />
-  </> 
+    <div className={style.wrapper}>
+      <Toaster position="top-center" reverseOrder={false} />
+      {address ? (
+        <>
+          <Header />
+          <Hero />
+        </>
+      ) : (
+        <div className={style.walletConnectWrapper}>
+          <button
+            className={style.button}
+            onClick={() => connectWallet('injected')}
+          >
+            Connect Wallet
+          </button>
+          <div className={style.details}>
+            You need Chrome to be
+            <br /> able to run this app.
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
