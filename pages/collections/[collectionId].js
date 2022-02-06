@@ -83,14 +83,15 @@ const Collection = () => {
   }, [marketPlaceModule])
 
   const fetchCollectionData = async (sanityClient = client) => {
-    const query = `*[_type == "marketItems" && contractAddress == "collectionId"]{
-      "imageUrl": bannerImage.asset->url,
+    const query = `*[_type == "marketItems" && contractAddress == "${collectionId}" ] {
+      "imageUrl": profileImage.asset->url,
+      "bannerImageUrl": bannerImage.asset->url,
       volumeTraded,
       createdBy,
       contractAddress,
       "creator": createdBy->userName,
       title, floorPrice,
-      "allOwners": owner[]->,
+      "allOwners": owners[]->,
       description
     }`
 
