@@ -6,3 +6,25 @@ const style = {
   topBarContent: `flex items-center`,
   likesCounter: `flex-1 flex items-center justify-end`,
 }
+
+const NFTImage = ({ selectedNft }) => {
+  return (
+    <div>
+      <div className={style.topBar}>
+        <div className={style.topBarContent}>
+          <IoMdSnow />
+          <div className={style.likesCounter}>
+            <AiOutlineHeart />
+            2.3K
+          </div>
+        </div>
+      </div>
+      <div>
+        {console.log(selectedNft, '🎆')}
+        <img src={selectedNft?.image} />
+      </div>
+    </div>
+  )
+}
+
+export default NFTImage
