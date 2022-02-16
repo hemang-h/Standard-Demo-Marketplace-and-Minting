@@ -29,7 +29,7 @@ const Nft = () => {
       provider.getSigner(),
       'https://eth-rinkeby.alchemyapi.io/v2/G--kvnNcpDx08GKWBappKdm671mE9Vjk'
     )
-    return sdk.getNFTModule('0x7028739D8715d6b99A73E97378438036DfCacA0f')
+    return sdk.getNFTModule('0x3aD360C4afbA1410Ae9030570E8cD587B7E28788')
   }, [provider])
 
   // get all NFTs in the collection
